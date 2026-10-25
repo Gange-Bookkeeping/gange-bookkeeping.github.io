@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Connecting · Gange Bookkeeping</title>
+<link rel="stylesheet" href="style.css">
+<script>
+// Intuit redirects here after sign-in. Hand the result to the sign-in helper
+// running on the bookkeeper's own computer; nothing is stored or sent elsewhere.
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.has('state') && (q.has('code') || q.has('error'))) {
+    location.replace('http://localhost:8000/callback' + location.search);
+  }
+})();
+</script>
+</head>
+<body>
+<main>
+<header>
+<a class="brand" href="index.html">Gange Bookkeeping</a>
+<nav><a href="index.html">Connect</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+<h1>Finishing the QuickBooks connection…</h1>
+<p>This page completes the sign-in on Gange Bookkeeping's computer. If nothing happens, the sign-in helper isn't running there. Close this window and start the connection again.</p>
+<footer>Questions: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#97;&#115;&#111;&#110;&#103;&#97;&#110;&#103;&#101;&#64;&#108;&#105;&#118;&#101;&#46;&#99;&#111;&#109;">&#106;&#97;&#115;&#111;&#110;&#103;&#97;&#110;&#103;&#101;&#64;&#108;&#105;&#118;&#101;&#46;&#99;&#111;&#109;</a></footer>
+</main>
+</body>
+</html>
